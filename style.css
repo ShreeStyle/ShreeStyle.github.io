@@ -154,154 +154,10 @@ body{
 }
 
 
-.Blog{
-    height:100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
-}
-
-.Blog-content{
-    font-size: 19px;
-    max-width:600px ;
-    
-}
-
-
-.Blog-content p{
-    font-size: 20px;
-    
-}
-
-.Blog-content h1 {
-    font-size: 56px;
-    font-weight: 700;
-    font-style: italic;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: fantasy;
-}
-
-
-.Blog-content h3{
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
-}
-
-.Blog-content h4{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.Blog-content p{
-    font-size: small;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-
-.Blog{
-    background: #1a1a1a;
-}
-
-.Projects{
-    background: #1a1a1a;
-    
-    height:100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
-}
-
-
-.Projects h1{
-    font-size: 56px;
-    font-weight: 700;
-    font-style: italic;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: fantasy;
-}
-
-.Blog, .Projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 50px 10%;
-}
-
-.Blog-content, .Projects-content {
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-}
-
-.blog-list, .project-list {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-}
-
-.blog-list li, .project-list li {
-    margin-bottom: 30px;
-    position: relative;
-    padding-left: 20px;
-}
-
-.blog-list li:before, .project-list li:before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #df84cd;
-}
-
-.blog-list h3, .project-list h3 {
-    font-size: 24px;
-    color: #f7c7ed;
-    margin-bottom: 10px;
-}
-
-.blog-list p, .project-list p {
-    font-size: 16px;
-}
-
-
-.Projects-content h3{
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
-}
-
-
-.Projects-content p{
-    font-size: small;
-    font-style: unset;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 
 
 
 
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input, .contact-form textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #df84cd;
-    background: #2a2a2a;
-    color: #ffffff;
-}
 
 .submit-btn {
     background: #f7c7ed;
@@ -354,19 +210,19 @@ body{
         padding: 15px 5%;
     }
 
-    .home, .blog, .projects, .contact, .social-links {
+    .home,.social-links {
         padding: 100px 5%;
     }
 
-    .home-content h1, .blog-content h1, .projects-content h1, .contact-content h1 {
+    .home-content h1 {
         font-size: 40px;
     }
 
-    .home-content h3, .blog-content h3, .projects-content h3 {
+    .home-content h3 {
         font-size: 20px;
     }
 
-    .home-content p, .blog-content p, .projects-content p {
+    .home-content p {
         font-size: 16px;
     }
 
@@ -374,9 +230,7 @@ body{
         width: 200px;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
+
 }
 
 

@@ -3,23 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel = "stylesheet" href="style.css">
+    <title>Projects ~ page</title>
+    <style>
 
+
+        body {
+
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f8ff; 
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .project-form {
+            margin-bottom: 30px;
+        }
+        .project-form input, .project-form textarea {
+
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .project-form button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .project-form button:hover {
+            background-color: #45a049;
+        }
+        .project-post {
+            background-color: #fff;
+            padding: 15px;
+
+
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .project-post h2 {
+
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-    <section id="Projects" class="Projects">
-        <div class="projects-content">
-            <h1>Projects</h1>
-            <div class="project-grid">
-                <div class="project-card">
-                   
-                    <p>blah..blah...blahhh</p>
-                
-            </div>
-        </div>
-    </section>
+
+
+
+    <h1>Dhanashree's Projects</h1>
+    
+    <div class="project-form">
+        <input type="text" id="projectTitle" placeholder="Enter project title">
+
+        <textarea id="projectContent" placeholder="Enter project details"></textarea>
+        <button onclick="addProjectPost()">Add Project</button>
+    </div>
+
+    <div id="projectPosts">
+       
+    </div>
+
+
+
+    
+
+
+
+    <script>//vanilaa js is here.
+       
+        function loadProjectPosts() {
+            var savedPosts = JSON.parse(localStorage.getItem('projectPosts')) || [];
+            var projectPostsContainer = document.getElementById('projectPosts');
+            projectPostsContainer.innerHTML = ''; // Clear existing posts
+
+            
+            savedPosts.forEach(function(post) {
+                var postElement = document.createElement('div');
+                postElement.className = 'project-post';
+                postElement.innerHTML = `
+                    <h2>${post.title}</h2>
+                    <p><em>Posted on: ${post.date}</em></p>
+                    <p>${post.content}</p>
+                `;
+                projectPostsContainer.appendChild(postElement);
+            })
+            
+            ;
+        }
+
+       
+        function addProjectPost() {
+            var title = document.getElementById('projectTitle').value ;
+
+            var content = document.getElementById('projectContent').value;
+
+            
+            if (title.trim() === '' || content.trim() === '') {
+                alert('Please enter both a title and details for your project.');
+                return;
+            }
+
+           
+            var newPost = 
+             {
+                title: title,
+                content: content,
+                date: new Date().toLocaleString()
+            };
+
+            
+            var savedPosts = JSON.parse(localStorage.getItem('projectPosts'))  || [];
+
+           
+            savedPosts.unshift(newPost);
+
+            
+            localStorage.setItem ('projectPosts', JSON.stringify(savedPosts));
+
+            
+            loadProjectPosts();
+
+           
+            document.getElementById('projectTitle').value = '';
+
+            document.getElementById('projectContent').value = '';
+        }
+
+        
+        window.onload = loadProjectPosts;
+    </script>
 
 
 </body>
+
+
+
 </html>
