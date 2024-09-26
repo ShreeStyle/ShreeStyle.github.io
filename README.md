@@ -1,6 +1,6 @@
 # My Preetiest Website
 
-##Description
+##Description :- 
 A personal website for showcasing my projects, blog posts, and my wildest thoughts. Built using HTML, css, and Javascript.
 
 
